@@ -19,7 +19,7 @@ public class Account {
         try {
             Connection connection = DriverManager.getConnection( url,username,password);
             String debit_query = "UPDATE account SET balance = balance - ? WHERE account_number = ? " ;
-            String credit_query = "UPDATE account SET balance = balance + ? WHERE account_number = ? " ;
+//            String credit_query = "UPDATE account SET balance = balance + ? WHERE account_number = ? " ;
             PreparedStatement debitpreparedStatement = connection.prepareStatement(debit_query);
 //            PreparedStatement creditpreparedStatement = connection.prepareStatement(credit_query);
             debitpreparedStatement.setDouble(1,500);
